@@ -16,6 +16,18 @@ using static Common.Helper;
 
 //Напишите программу, которая будет преобразовывать десятичное число в двоичное. 45 -> 101101
 //3 -> 11
-//2 -> 10
+//2 -> 1)
 
+// int[] array = CreateRandomArray();
+// Console.Write("[  " );
+// PrintArray(array);
+// Console.Write("]  " );
+// int[] reversed = ReverseArray(array);
+// Console.WriteLine();
+// Console.Write("[  " );
+// PrintArray(reversed);
+// Console.Write("]  " );
 
+int number = InputInt1();
+int[] cubeTable = GetCubeTable(number);
+PrintArray(cubeTable);
