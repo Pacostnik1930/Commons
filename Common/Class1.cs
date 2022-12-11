@@ -55,11 +55,11 @@ public static class Helper
 
     }
 
-    public static double GetDistanceBetweenTwoPoints(double ax, double ay, double bx, double by, double zx, double zy)
-    {
-        double ab = Math.Round(Math.Sqrt(Math.Pow(bx - ax, 2) + Math.Pow(by - ay, 2) + Math.Pow(bz - az, 2)));
-        return ab;
-    }
+    // public static double GetDistanceBetweenTwoPoints(double ax, double ay, double bx, double by, double zx, double zy)
+    // {
+    //     double ab = Math.Round(Math.Sqrt(Math.Pow(bx - ax, 2) + Math.Pow(by - ay, 2) + Math.Pow(bz - az, 2)));
+    //     return ab;
+    // }
     // Метод для расчета расстояния между двух точек в 3d пространстве
 
     public static int[] GetCubeTable(int num)       // метод для таблицы кубов
@@ -100,5 +100,19 @@ Console.WriteLine("[{0}]", string.Join(", ", array));
 return array;
 }
 
+public static int InputInt1()                      // Метод принимает координаты двух точек
+    {
+        Console.WriteLine("Введите целое число");
+        bool isNumber=int.TryParse(Console.ReadLine(),out int number);
+        if (isNumber)
+        {
+            return number;
+        }
+        else
+        {
+            Console.WriteLine("Введено некорректное значение");
+            return -1;
+        }
 
+}
 }
