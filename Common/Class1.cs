@@ -2,7 +2,31 @@
 
 public static class Helper
 {
-
+ public static int[,] SumIndex(int countOfRows, int countOfColumns)  // Метод нахождения элемента в массиве по формуле A=m+n
+{
+    int[,] array = new int[countOfRows, countOfColumns];
+    for(int i=0;i<array.GetLength(0);i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+    {
+        array[i, j] = i + j;
+    }
+}
+return array;
+}
+    public static void Print2DArray(int[,] arr)
+    {  
+        
+        for (var i = 0; i < arr.GetLength(0); i++)
+        {
+            for (var j = 0; j < arr.GetLength(1); j++)
+            {
+                Console.Write($"{arr[i, j]} ");
+            }
+            Console.WriteLine();
+        }
+        
+    }
     public static int[] CreateRandomArray()  // Создание массива со случайными числами
     {
         Random random = new Random();
